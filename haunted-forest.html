@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=""UTF-8"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: rgb(161, 193, 0) rgba(0, 0, 0, 0.65);
+        }
+        body {
+            background-image: url('https://i.pinimg.com/1200x/b1/69/c6/b169c610d8a60b4fc7c8da0a095bc49c.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: 15%;
+        }
+        h1 {
+            font-family: "Tagesschrift", system-ui;
+            font-weight: 300;
+            text-transform: lowercase;
+            font-size: 2.5rem;
+            display: inline;
+        }
+        h2 {
+            font-family: "Tagesschrift", system-ui;
+            font-weight: 300;
+            text-transform: lowercase;
+            font-size: 2.25rem;
+        }
+        h3 {
+            font-family: "Tagesschrift", system-ui;
+            font-weight: 300;
+            text-transform: lowercase;
+            font-size: 2rem;
+        }
+        h4 {
+            font-family: "Tagesschrift", system-ui;
+            font-weight: 300;
+            text-transform: lowercase;
+            font-size: 1.50rem;
+            margin: 0.25rem; /*Don't delete this, it controls the height of the faq boxes*/
+        }
+        p {
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1rem;
+        }
+        a {
+            color: rgb(255, 149, 0);
+            text-decoration: none;
+            transition: 
+                color 0.55s ease-out, 
+                text-shadow 0.55s ease-out, 
+                letter-spacing 0.55s ease-out;
+            -webkit-transition: 
+                color 0.55s ease-out, 
+                text-shadow 0.55s ease-out, 
+                letter-spacing 0.55s ease-out;
+        }
+            a:hover {
+                color: rgb(161, 193, 0);
+                text-shadow: 0.25rem 0.25rem 0.4rem rgba(189, 82, 0, 0.741);
+                letter-spacing: 0.4rem;
+            }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline;
+            text-align: center;
+            margin: 1.75%;
+        }
+        details {
+            background-color: rgba(189, 82, 0, 0.741);
+            color: white;
+            padding: 0.05rem;
+            margin: 0.50rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        summary {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            font-family: "Tagesschrift", system-ui;
+            font-weight: 300;
+            text-transform: lowercase;
+            cursor: pointer;
+            padding: 0.25rem;
+        }
+            summary:hover {
+                color: rgb(161, 193, 0);
+                text-shadow: 0.25rem 0.25rem 0.4rem rgba(0, 0, 0, 0.70);
+            }
+        .breadcrumb-box {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.15rem;
+            text-align: center;
+            color: white;
+            border-top: 0.1rem solid white;
+            border-bottom: 0.1rem solid white;
+            background-color: rgba(0, 0, 0, 0.70);
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .nav-btn {
+            color: rgb(255, 115, 0);
+        }
+        .title-box {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.70);
+            color: white;
+            text-shadow: 0.25rem 0.25rem 0.4rem rgba(189, 82, 0, 0.741);
+        }
+        .body-box {
+            display: flex;
+            gap: 1rem;
+            margin: 0.5rem;
+        }
+            .left {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                padding: 0.1rem;
+            }
+                .left-box-1 {
+                    background-color:rgba(0, 0, 0, 0.70);
+                    color: white;
+                    border: 1px solid yellow;
+                    padding: 0.25rem;
+                    margin: 0.1rem;
+                }
+                .left-box-2 {
+                    background-color:rgba(0, 0, 0, 0.70);
+                    color: white;
+                    border: 1px solid yellow;
+                    padding: 0.25rem;
+                    margin: 0.1rem;
+                }
+                .left-box-3 {
+                    background-color:rgba(0, 0, 0, 0.70);
+                    color: white;
+                    border: 1px solid yellow;
+                    padding: 0.25rem;
+                    margin: 0.1rem;
+                }
+            .right-box {
+                border: 1px solid yellow;
+                width: 50%;
+                order: 10;
+            }
+    </style>    
+    </head>
+    <body>
+        <div class="breadcrumb-box">
+            <p><a href="index.html">home</a> / haunted forest</p>
+        </div>
+
+        <div class="title-box">
+            <h1>haunted forest</h1>
+        </div>
+
+        <div class="body-box">
+            <div class="left">
+                <div class="left-box-1">
+                    <h4>introduction</h4>
+                    <p>here in my haunted forest is where i post about my craft.</p>
+                </div>
+                <div class="left-box-2">
+                    <h4></h4>
+                    <p>More text for more later</p>
+                </div>
+                <div class="left-box-3">
+                    <p>testing even more stuff</p>
+                </div>
+            </div>
+            <div class="right-box">
+                <details>
+                    <summary><h4>category 1</h4></summary>
+                    <p>answer 1</p>
+                </details>
+                <details>
+                    <summary><h4>category 2</h4></summary>
+                    <p>answer 2</p>
+                </details>
+                <details>
+                    <summary><h4>category 3</h4></summary>
+                    <p>answer 3</p>
+                </details>
+                <details>
+                    <summary><h4>category 4</h4></summary>
+                    <p>answer 4</p>
+                </details>
+            </div>
+        </div>
+    </body>
+</html>
