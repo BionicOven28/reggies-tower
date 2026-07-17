@@ -118,17 +118,47 @@
                 justify-content: center;
                 flex-direction: column;
                 margin-top: 1rem;
-                padding: 1rem;
-                border: 1px solid cyan;
-                background-color:rgba(0, 0, 0, 0.65);
+                padding: 0.5rem;
+                border: 1px solid rgba(250, 195, 255, 0.741);
+                background-color: rgba(100, 0, 117, 0.741);
             }
                 .blinkie-box {
                     display: flex;
                     flex-flow: row wrap;
                     justify-content: space-evenly;
+                    margin: 0.5rem;
                     color: white;
                     border: 1px solid yellow;
                 }
+                    .marquee {
+                        --gap: 1rem;
+                        position: relative;
+                        display: flex;
+                        overflow: hidden;
+                        user-select: none;
+                        gap: var(--gap);
+                    }
+                    .marquee_content {
+                        display: flex;
+                        flex-shrink: 0;
+                        justify-content: space-around;
+                        gap: var(--gap);
+                        min-width: 100%;
+                    }
+                    @keyframes scroll {
+                        from {
+                            transform: translateX(0);
+                        }
+                        to {
+                            transform: translateX(calc(-100% - var(--gap)));
+                        }
+                    }
+                    .marquee_content {
+                        animation: scroll 10s linear infinite;
+                    }
+                    .marquee-hover-pause:hover .marquee_content {
+                        animation-play-state: paused;
+                    }
                 .left-right {
                     display: flex;
                     flex-flow: row wrap;
@@ -380,6 +410,7 @@
         function closeNav() {
             document.getElementById("menu-panel").style.width = "0";
         }
+        
     </script>  
     </head>
     <body>
@@ -398,8 +429,12 @@
                 <button class="openbtn" onClick="openNav()">𐂂</button>
             </div>
         <div class="body-box">
-            <div class="blinkie-box">
-                <p>blinkies will go here</p>
+            <div class="blinkie-box marquee marquee-hover-pause">
+                <ul class="marquee_content">
+                    <li>blinkie 1</li>
+                    <li>blinkie 2</li>
+                    <li>blinkie 3</li>
+                </ul>
             </div>
             <div class="left-right">
                 <div class="left-box">
