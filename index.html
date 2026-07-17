@@ -63,6 +63,14 @@
                     background-color: rgba(161, 0, 189, 0.741);
                     letter-spacing: 0.3rem;
                 }
+            ul {
+                list-style-type: none;
+                margin: 0;
+            }
+            li {
+                display: block;
+                text-align: center;
+            }
             .header-box {
                 display: flex;
                 justify-content: space-between;
@@ -127,8 +135,7 @@
                     flex-flow: row wrap;
                     justify-content: space-evenly;
                     margin: 0.5rem;
-                    color: white;
-                    border: 1px solid yellow;
+                    border: 1px solid rgba(255, 88, 222, 0.849);
                 }
                     .marquee {
                         --gap: 1rem;
@@ -154,7 +161,7 @@
                         }
                     }
                     .marquee_content {
-                        animation: scroll 10s linear infinite;
+                        animation: scroll 30s linear infinite;
                     }
                     .marquee-hover-pause:hover .marquee_content {
                         animation-play-state: paused;
@@ -431,9 +438,9 @@
         <div class="body-box">
             <div class="blinkie-box marquee marquee-hover-pause">
                 <ul class="marquee_content">
-                    <li>blinkie 1</li>
-                    <li>blinkie 2</li>
-                    <li>blinkie 3</li>
+                    <li><img src="pics/blinkies-stamps/raichudonut.png"/></li>
+                    <li><img src="pics/blinkies-stamps/raichu1.png"/></li>
+                    <li><img src="pics/blinkies-stamps/ampharos1.png"/></li>
                 </ul>
             </div>
             <div class="left-right">
