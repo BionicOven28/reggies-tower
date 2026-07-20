@@ -134,16 +134,24 @@
                 padding: 0.5rem;
                 background-color: rgba(23, 24, 59, 0.80); /*Dark Blue*/
             }
+            .moon-box {
+                display: flex;
+                justify-content: center;
+                background-color: rgba(23, 24, 59, 0.80); /*Dark Blue*/
+                color:rgba(242, 232, 240, 100); /*Stone White*/
+            }
                 /*Flexboxes for index page content*/
                 .left-right {
                     display: flex;
                     flex-flow: column wrap;
-                    justify-content: space-evenly;
+                    justify-content: space-between;
+                    padding: 0.3rem;
                     color:rgba(242, 232, 240, 100); /*Stone White*/
                 }
                     .left-box {
                         display: flex;
                         justify-content: center;
+                        text-align: center;
                         margin: 0.1rem;
                         border: 1px solid red;
                     }
@@ -157,6 +165,7 @@
                     .right-box {
                         display: flex;
                         justify-content: center;
+                        text-align: center;
                         margin: 0.1rem;
                         border: 1px solid red;
                     }
@@ -462,19 +471,25 @@
                     <a href="blog.html">blog</a>
                     <a href="bookshelf.html">bookshelf</a>
                     <a href="hopecore.html">hopecore</a>
+                    <a href="memeseum.html">memeseum</a>
                 </div>
                 <button class="openbtn" onClick="openNav()">𐂂</button>
             </div>
         <div class="body-box">
+            <div class="moon-box">
+                <p>moon phase api here maybe?</p>
+            </div>
             <div class="left-right">
                 <div class="left-box">
+                    <p>welcome to my haunted tower!</p>
                     <p><a href="about.html">about</a>✦<a href="/">a link</a></p>
                 </div>
                 <div class="middle-box">
                     <p>"Find what you love and let it kill you." <br/>-Charles Bukowski</p>
                 </div>
                 <div class="right-box">
-                    <p>right box</p>
+                    <p>Currently Reading: <br/>"A Title of a Book Here" <br/>
+                    a link to my <a href="bookshelf.html">bookshelf</a></p>
                 </div>
             </div>
         </div>
