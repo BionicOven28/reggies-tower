@@ -10,6 +10,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        
 
     <style>
         /*Standard styles, no breakpoint differences.*/
@@ -17,6 +21,10 @@
             font-family: "Tagesschrift", system-ui;
             font-weight: 300;
             text-transform: lowercase;
+        }
+        p {
+            font-family: "Roboto", sans-serif;
+            margin: auto;
         }
         a {
                 color: rgb(126, 42, 83); /*Dark Raspberry*/
@@ -66,9 +74,6 @@
             }
             h4 {
                 font-size: 0.85rem;
-            }
-            p {
-                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             }
             .header-box {
                 display: flex;
@@ -134,7 +139,7 @@
                     display: flex;
                     flex-flow: column wrap;
                     justify-content: space-evenly;
-                    color: white;
+                    color:rgba(242, 232, 240, 100); /*Stone White*/
                 }
                     .left-box {
                         display: flex;
@@ -145,6 +150,7 @@
                     .middle-box {
                         display: flex;
                         justify-content: center;
+                        text-align: center;
                         margin: 0.1rem;
                         border: 1px solid cyan;
                     }
@@ -194,9 +200,8 @@
                 position: absolute;
                 margin-left: 12rem;
                 margin-top: -0.5rem;
-                color:  white;
-                text-shadow: 0.25rem 0.25rem 0.4rem rgba(255, 88, 222, 0.849);
-                text-transform: italic;
+                color: rgba(242, 232, 240, 100); /*Stone White*/
+                text-shadow: 0.25rem 0.25rem 0.4rem rgb(126, 42, 83); /*Dark Raspberry*/
             }
             .change-log-box {
                 display: flex;
@@ -205,25 +210,25 @@
                 gap: 0.5rem;
                 margin-top: 2rem; 
                 padding: 0.5rem;
-                color: white;
+                color: rgba(242, 232, 240, 100); /*Stone White*/
                 border: 1px solid rgba(250, 195, 255, 0.741);
                 max-height: 8rem;
                 overflow: auto;
                 scrollbar-width: thin;
-                scrollbar-color: rgb(161, 193, 0) rgba(0, 0, 0, 0.65);
+                scrollbar-color: rgba(201, 224, 235, 100) rgba(0, 0, 0, 0.65); /*Pale Sky*/
             }
                 details {
                     display: flex;
                     text-align: center;
                     background-color: rgba(0, 0, 0, 0.65);
-                    color: white;
+                    color: rgba(242, 232, 240, 100); /*Stone White*/
                 }
                 summary {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     background-color: rgba(161, 0, 189, 0.741);
-                    color: white;
+                    color: rgba(242, 232, 240, 100); /*Stone White*/
                 }
 
         }
@@ -463,10 +468,10 @@
         <div class="body-box">
             <div class="left-right">
                 <div class="left-box">
-                    <p><a href="about.html">about</a></p>
+                    <p><a href="about.html">about</a>✦<a href="/">a link</a></p>
                 </div>
                 <div class="middle-box">
-                    <p>middle middle middle</p>
+                    <p>"Find what you love and let it kill you." <br/>-Charles Bukowski</p>
                 </div>
                 <div class="right-box">
                     <p>right box</p>
@@ -492,55 +497,55 @@
         <h2 class="change-log-title">change log</h2>
         <div class="change-log-box">
             <details>
-                <summary><strong>16 July 2026</strong></summary>
+                <summary><strong><p>16 July 2026</p></strong></summary>
                 <p>Working the specifics for the S Mobile layout. Adjusted some of the boxes and added content.</p>
             </details>
             <details>
-                <summary><strong>20 Apr 2026</strong></summary>
+                <summary><strong><p>20 Apr 2026</p></strong></summary>
                 <p>Added a title to the index page. Adjusted the size of the navigation bar.</p>
             </details>
             <details>
-                <summary><strong>12 Apr 2026</strong></summary>
+                <summary><strong><p>12 Apr 2026</p></strong></summary>
                 <p>Created the memeseum page. Added a link to the memeseum from the about page. Worked on format and content for haunted forest page.</p>
             </details>
             <details>
-                <summary><strong>9 Apr 2026</strong></summary>
+                <summary><strong><p>9 Apr 2026</p></strong></summary>
                 <p>Added the consistent styling for the navbar to the "about.html" page. Working on downloading all of my existing assets and content so I can move away from hotlinking media.</p>
             </details>
             <details>
-                <summary><strong>8 Apr 2026</strong></summary>
+                <summary><strong><p>8 Apr 2026</p></strong></summary>
                 <p>Went back to the basic bones of my index page. Created "blog.html" and unlinked "about.html" from the navbar. Moved that to the intro box instead. Working a consistent navbar for each page that exists. Working on a template for blog posts.</p>
             </details>
             <details>
-                <summary><strong>6 Apr 2026</strong></summary>
+                <summary><strong><p>6 Apr 2026</p></strong></summary>
                 <p>Began a losing fight trying to put my stamps inside a frame and hidden unless scrolled over. Morale is low. Removed some of the stamps while playing with it. Will return to this later, when I feel less defeated.</p>
             </details>
             <details>
-                <summary><strong>2 Apr 2026</strong></summary>
+                <summary><strong><p>2 Apr 2026</p></strong></summary>
                 <p>Added reading-log.html page. Wrapped flex items in my stamps and blinkie box on the index page. Added the hopecore page and linked it in the nav bar.</p>
             </details>
             <details>
-                <summary><strong>1 Apr 2026</strong></summary>
+                <summary><strong><p>1 Apr 2026</p></strong></summary>
                 <p>Worked on hover animation for navigation buttons. Built flex container for layout. Added custom scroll bars to both index page and change log box in bottom container on index page.</p>
             </details>
             <details>
-                <summary><strong>4 Jun 2025</strong></summary>
+                <summary><strong><p>4 Jun 2025</p></strong></summary>
                 <p>Added breadcrumb navigation to index page and about pages. Have yet to connect other existing pages.</p>
             </details>
             <details>
-                <summary><strong>3 Jun 2025</strong></summary>
+                <summary><strong><p>3 Jun 2025</p></strong></summary>
                 <p>Continued work on the viewport sized css for each page. Added backgrounds to the home page, the shrines index page, and the site map page.</p>
             </details>
             <details>
-                <summary><strong>9 May 2025</strong></summary>
+                <summary><strong><p>9 May 2025</p></strong></summary>
                 <p>Combined CSS files and HTML files to streamline coding process. Added breakpoints via media queries for more viewport sizes. Added pages and built bones for more niche interests.</p>
             </details>
             <details>
-                <summary><strong>8 May 2025</strong></summary>
+                <summary><strong><p>8 May 2025</p></strong></summary>
                 <p>Worked on responsive design for existing pages: established breakpoints for different device viewports.</p>
             </details>
             <details>
-                <summary><strong>7 May 2025</strong></summary>
+                <summary><strong><p>7 May 2025</p></strong></summary>
                 <p>Built web pages "index.html" and "about.html".</p>
             </details>
         </div>
