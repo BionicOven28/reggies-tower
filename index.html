@@ -16,15 +16,19 @@
         
 
     <style>
-        /*Standard styles, not breakpoint dependent.*/
+    /*Reference color palette*/
+        /*Stone White: rgba(242, 232, 240, 100)*/
+        /*Dark Blue: rgba(23, 24, 59, 0.80)*/
+        /*Dark Raspberry: rgb(126, 42, 83)*/
+        /*Pearly Purple: rgb(186, 113, 162)*/
+        /*Deep Lilac: rgba(131, 80, 196, 0.75)*/
+        /*Dusty Denim: rgba(115, 146, 181, 100)*/
+        /*Bright Indigo: rgba(120, 25, 245, 0.75)*/
+    
+    /*Standard styles, not breakpoint dependent.*/
         html {
-                scrollbar-width: thin;
-                scrollbar-color: rgba(201, 224, 235, 100) rgba(0, 0, 0, 0.65); /*Pale Sky*/
-            }
-        body {
-            background-image: url('pics/stars3.gif'); /*dark blue stars gif*/
-            background-repeat: repeat;
-            background-size: cover; /*1vh doesn't work and breaks the gif*/
+            scrollbar-width: thin;
+            scrollbar-color: rgba(201, 224, 235, 100) rgba(0, 0, 0, 0.65); /*Pale Sky*/
         }
         h1, h2, h3, h4, h5 {
             font-family: "Tagesschrift", system-ui;
@@ -48,9 +52,9 @@
                     letter-spacing 0.55s ease-out;
         }
             a:hover {
-                    color: rgb(186, 113, 162); /*Pearly Purple*/
-                    text-shadow: 0.25rem 0.25rem 0.4rem rgba(131, 80, 196, 0.75); /*Deep Lilac*/
-                    letter-spacing: 0.2rem;
+                color: rgb(186, 113, 162); /*Pearly Purple*/
+                text-shadow: 0.25rem 0.25rem 0.4rem rgba(131, 80, 196, 0.75); /*Deep Lilac*/
+                letter-spacing: 0.2rem;
             }
         ul {
             list-style-type: none;
@@ -60,6 +64,7 @@
             display: block;
             text-align: center;
         }
+        /*Title Box*/
         .header-box {
             display: flex;
             justify-content: space-between;
@@ -76,9 +81,38 @@
             height: auto;
             margin-top: 0.85rem;
         }
-        
-        /*S Mobile -- min 350w x 480h*/
+        /*Main Content Boxes*/
+        .body-box {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(23, 24, 59, 0.80); /*Dark Blue*/
+            color: rgba(242, 232, 240, 100); /*Stone White*/
+        }
+            .left-box {
+                border: 1px solid red;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+            }
+            .middle-box {
+                border: 1px solid orange;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+            .right-box {
+                border: 1px solid yellow;
+                display: flex;
+                justify-content: center;
+            }
+
+    /*S Mobile -- min 350w x 480h*/
         @media (min-width: 350px) {
+            body { /*Mobile-Only Style*/
+                background-image: url('pics/stars3.gif'); /*dark blue stars gif*/
+                background-repeat: repeat;
+                background-size: cover; /*1vh doesn't work and breaks the gif*/
+            }
             h1 {
                 font-size: 1.65rem;
             }
@@ -129,51 +163,13 @@
                 right: 1rem;
                 font-size: 2.5rem; 
             }
-
-            /*Main Box Styles*/
+            /*Main Content Boxes*/
             .body-box {
                 display: flex;
-                justify-content: center;
                 flex-direction: column;
                 margin-top: 1rem;
                 padding: 0.5rem;
-                background-color: rgba(23, 24, 59, 0.80); /*Dark Blue*/
             }
-            .moon-box {
-                display: flex;
-                justify-content: center;
-                background-color: rgba(23, 24, 59, 0.80); /*Dark Blue*/
-                color:rgba(242, 232, 240, 100); /*Stone White*/
-            }
-                /*Flexboxes for index page content*/
-                .left-right {
-                    display: flex;
-                    flex-flow: column wrap;
-                    justify-content: space-between;
-                    padding: 0.3rem;
-                    color:rgba(242, 232, 240, 100); /*Stone White*/
-                }
-                    .left-box {
-                        display: flex;
-                        justify-content: center;
-                        text-align: center;
-                        margin: 0.1rem;
-                        border: 1px solid red;
-                    }
-                    .middle-box {
-                        display: flex;
-                        justify-content: center;
-                        text-align: center;
-                        margin: 0.1rem;
-                        border: 1px solid cyan;
-                    }
-                    .right-box {
-                        display: flex;
-                        justify-content: center;
-                        text-align: center;
-                        margin: 0.1rem;
-                        border: 1px solid red;
-                    }
                 /*Blinkie Scroll-By Box*/
                 .blinkie-box {
                     display: flex;
@@ -246,8 +242,13 @@
                 }
 
         }
-        /*L Mobile-- min 480w x 800h*/
+    /*L Mobile-- min 480w x 800h*/
         @media (min-width: 480px) {
+            body { /*Mobile-Only Style*/
+                background-image: url('pics/stars3.gif'); /*dark blue stars gif*/
+                background-repeat: repeat;
+                background-size: cover; /*1vh doesn't work and breaks the gif*/
+            }
             h1 {
                 font-size: 2rem;
             }
@@ -260,26 +261,7 @@
             h4 {
                 font-size: 0.85rem;
             }
-            a {
-                color: rgb(255, 149, 0);
-                text-decoration: none;
-                transition: 
-                    color 0.55s ease-out, 
-                    text-shadow 0.55s ease-out, 
-                    letter-spacing 0.55s ease-out;
-                -webkit-transition: 
-                    color 0.55s ease-out, 
-                    text-shadow 0.55s ease-out, 
-                    letter-spacing 0.55s ease-out;
-            }
-                a:hover {
-                    color: rgb(161, 193, 0);
-                    text-shadow: 0.25rem 0.25rem 0.4rem rgba(189, 82, 0, 0.741);
-                    background-color: rgba(161, 0, 189, 0.741);
-                    letter-spacing: 0.3rem;
-                }
-
-            /*Mobile Navigation Menu*/
+            /*Mobile Nav Menu and Pop-Out, ***Only Visible on Mobile***/
             .menu-panel {
                 position: fixed;
                 z-index: 1;
@@ -317,42 +299,22 @@
                 right: 1rem;
                 font-size: 2.5rem; 
             }
-            /*Main Content Box Styles*/
+            /*Main Content Boxes*/
             .body-box {
                 display: flex;
-                justify-content: center;
                 flex-direction: column;
                 margin-top: 1rem;
-                border: 1px solid cyan;
-                background-color:rgba(0, 0, 0, 0.65);
+                padding: 0.5rem;
             }
-                .blinkie-box {
-                    display: flex;
-                    flex-flow: row wrap;
-                    justify-content: space-evenly;
-                    color: white;
-                    border: 1px solid yellow;
-                }
-                .left-right {
-                    display: flex;
-                    flex-flow: row wrap;
-                    justify-content: space-around;
-                    color: white;
-                }
-                    .left-box {
-                        display: flex;
-                        border: 1px solid pink;
-                    }
-                    .right-box {
-                        display: flex;
-                        border: 1px solid red;
-                    }
-                .middle-box {
-                    display: flex;
-                    justify-content: center;
-                    color: white;
-                    border: 1px solid green;
-                }
+
+
+            /*Blinkie Box Marquee Styles*/
+            .blinkie-box {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-evenly;
+                margin: 1rem;
+            }
             .change-log-title {
                 position: absolute;
                 margin-left: 10rem;
@@ -374,6 +336,11 @@
         }
         /*XL Mobile / Tablets -- min 768px*/
         @media (min-width: 768px) {
+            body { /*Mobile-Only Style*/
+                background-image: url('pics/stars3.gif'); /*dark blue stars gif*/
+                background-repeat: repeat;
+                background-size: cover; /*1vh doesn't work and breaks the gif*/
+            }
         }
         /*S Desktop -- min 1024px*/
         @media (min-width: 1024px) {
@@ -460,9 +427,6 @@
                 <button class="openbtn" onClick="openNav()">𐂂</button>
             </div>
         <div class="body-box">
-            <div class="moon-box">
-                <p>moon phase api here maybe?</p>
-            </div>
             <div class="left-right">
                 <div class="left-box">
                     <p>welcome to my haunted tower!</p>
