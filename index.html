@@ -46,22 +46,37 @@
                     color 0.55s ease-out, 
                     text-shadow 0.55s ease-out, 
                     letter-spacing 0.55s ease-out;
-            }
-                a:hover {
+        }
+            a:hover {
                     color: rgb(186, 113, 162); /*Pearly Purple*/
                     text-shadow: 0.25rem 0.25rem 0.4rem rgba(131, 80, 196, 0.75); /*Deep Lilac*/
                     letter-spacing: 0.2rem;
-                }
-            ul {
+            }
+        ul {
                 list-style-type: none;
                 margin: 0;
-            }
-            li {
+        }
+        li {
                 display: block;
                 text-align: center;
-            }
+        }
+        .header-box {
+            display: flex;
+            justify-content: space-between;
+        }
+        .title-box {
+            background-color: rgba(23, 24, 59, 0.80); /*Dark Blue*/
+            padding: 0.50rem;
+            margin: 0.50rem;
+            color: rgba(242, 232, 240, 100); /*Stone White*/
+            text-shadow: 0.25rem 0.25rem 0.4rem rgba(131, 80, 196, 0.75); /*Deep Lilac*/
+        }
+        #glitter-title {
+            width: 70vw;
+            height: auto;
+            margin-top: 0.85rem;
+        }
         
-
         /*S Mobile -- min 350w x 480h*/
         @media (min-width: 350px) {
             body {
@@ -81,17 +96,7 @@
             h4 {
                 font-size: 0.85rem;
             }
-            .header-box {
-                display: flex;
-                justify-content: space-between;
-            }
-            .title-box {
-                background-color:rgba(23, 24, 59, 0.80); /*Dark Blue*/
-                padding: 0.50rem;
-                margin: 0.50rem;
-                color: rgba(242, 232, 240, 100); /*Stone White*/
-                text-shadow: 0.25rem 0.25rem 0.4rem rgba(131, 80, 196, 0.75); /*Deep Lilac*/
-            }
+
             /*Mobile Nav Menu/PopOut, Only Visible on Mobile*/
             .menu-panel {
                 position: fixed;
@@ -251,7 +256,7 @@
         @media (min-width: 480px) {
             body {
                 background-image: url('pics/stars3.gif');
-                background-repeat: no-repeat;
+                background-repeat: repeat;
                 background-size: cover;
             }
             h1 {
@@ -287,16 +292,7 @@
                     background-color: rgba(161, 0, 189, 0.741);
                     letter-spacing: 0.3rem;
                 }
-            .header-box {
-                display: flex;
-                justify-content: space-between;
-            }
-            .title-box {
-                background-color:rgba(0, 0, 0, 0.55);
-                padding: 0.75rem;
-                color: white;
-                text-shadow: 0.25rem 0.25rem 0.4rem rgba(255, 88, 222, 0.849);
-            }
+
             /*Mobile Navigation Menu*/
             .menu-panel {
                 position: fixed;
@@ -464,12 +460,12 @@
     <body>
         <div class="header-box">
             <div class="title-box">
-                <h1>reggie's haunted tower</h1>
+                <img id="glitter-title" src="https://www.gigaglitters.com/created/tFYPbmSOgw.gif" alt="http://www.rasaint.net/ - Glitter Graphics"><br>
             </div>
                 <div id="menu-panel" class="menu-panel">
                     <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">x</a>
                     <a href="index.html">index</a>
-                    <a href="haunted-forest.html">haunted forest</a>
+                    <a href="book-of-charms.html">book of charms</a>
                     <a href="blog.html">blog</a>
                     <a href="bookshelf.html">bookshelf</a>
                     <a href="hopecore.html">hopecore</a>
