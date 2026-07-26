@@ -16,7 +16,7 @@
         
 
     <style>
-        /*Standard styles, no breakpoint differences.*/
+        /*Standard styles, not breakpoint dependent.*/
         html {
                 scrollbar-width: thin;
                 scrollbar-color: rgba(201, 224, 235, 100) rgba(0, 0, 0, 0.65); /*Pale Sky*/
@@ -24,7 +24,7 @@
         body {
             background-image: url('pics/stars3.gif'); /*dark blue stars gif*/
             background-repeat: repeat;
-            background-size: 1vh;
+            background-size: cover; /*1vh doesn't work and breaks the gif*/
         }
         h1, h2, h3, h4, h5 {
             font-family: "Tagesschrift", system-ui;
@@ -36,14 +36,14 @@
             margin: auto;
         }
         a {
-                color: rgb(126, 42, 83); /*Dark Raspberry*/
-                text-decoration: none;
-                transition:
-                    color 0.55s ease-out, 
+            color: rgb(126, 42, 83); /*Dark Raspberry*/
+            text-decoration: none;
+            transition:
+                color 0.55s ease-out, 
                     text-shadow 0.55s ease-out, 
                     letter-spacing 0.55s ease-out;
-                -webkit-transition: 
-                    color 0.55s ease-out, 
+            -webkit-transition: 
+                color 0.55s ease-out, 
                     text-shadow 0.55s ease-out, 
                     letter-spacing 0.55s ease-out;
         }
@@ -53,12 +53,12 @@
                     letter-spacing: 0.2rem;
             }
         ul {
-                list-style-type: none;
-                margin: 0;
+            list-style-type: none;
+            margin: 0;
         }
         li {
-                display: block;
-                text-align: center;
+            display: block;
+            text-align: center;
         }
         .header-box {
             display: flex;
@@ -79,11 +79,6 @@
         
         /*S Mobile -- min 350w x 480h*/
         @media (min-width: 350px) {
-            body {
-                background-image: url('pics/stars3.gif'); /*dark blue stars gif*/
-                background-repeat: repeat;
-                background-size: cover; /*Works better than having it set with vh/vw*/
-            }
             h1 {
                 font-size: 1.65rem;
             }
@@ -96,8 +91,7 @@
             h4 {
                 font-size: 0.85rem;
             }
-
-            /*Mobile Nav Menu/PopOut, Only Visible on Mobile*/
+            /*Mobile Nav Menu and Pop-Out, ***Only Visible on Mobile***/
             .menu-panel {
                 position: fixed;
                 z-index: 1;
@@ -116,15 +110,6 @@
                     padding: 0.5rem;
                     transition: 0.3s;
                 }
-            /*All of the settings for the X btn*/
-            .menu-panel .closebtn {
-                position: absolute;
-                margin-left: 1rem;
-                top: 0;
-                right: 1rem;
-                font-size: 2.5rem; 
-            }
-            /*All of the settings for the Deer Btn*/
             .openbtn {
                 font-size: 2rem;
                 margin: 0.5rem;
@@ -137,6 +122,15 @@
                     text-shadow: 0.25rem 0.25rem 0.4rem rgba(131, 80, 196, 0.75); /*Deep Lilac*/
                     background-color: rgba(120, 25, 245, 0.75); /*Bright Indigo*/
                 }
+            .menu-panel .closebtn {
+                position: absolute;
+                margin-left: 1rem;
+                top: 0;
+                right: 1rem;
+                font-size: 2.5rem; 
+            }
+
+            /*Main Box Styles*/
             .body-box {
                 display: flex;
                 justify-content: center;
@@ -254,11 +248,6 @@
         }
         /*L Mobile-- min 480w x 800h*/
         @media (min-width: 480px) {
-            body {
-                background-image: url('pics/stars3.gif');
-                background-repeat: repeat;
-                background-size: cover;
-            }
             h1 {
                 font-size: 2rem;
             }
@@ -270,9 +259,6 @@
             }
             h4 {
                 font-size: 0.85rem;
-            }
-            p {
-                font-family: "Roboto", sans-serif;
             }
             a {
                 color: rgb(255, 149, 0);
@@ -298,40 +284,40 @@
                 position: fixed;
                 z-index: 1;
                 height: 100vh;
-                width: 0vw;
+                width: 0;
                 top: 0;
                 left: 0;
-                background-color: #111;
+                background-color: rgba(23, 24, 59, 0.80); /*Dark Blue*/
                 overflow-x: hidden;
-                padding-top: 25vh;
-                transition: 0.5s;
+                padding-top: 20vh;
+                transition: 0.35s;
             }
-            .menu-panel a {
-                display: block;
-                text-decoration: none;
-                padding: 0.45rem;
-                transition: 0.3s;
-            }
-            .menu-panel .closebtn {
-                position: absolute;
-                margin-left: 4rem;
-                top: 0;
-                right: 2rem;
-                font-size: 3rem;
-            }
+                .menu-panel a {
+                    display: block;
+                    text-decoration: none;
+                    padding: 0.5rem;
+                    transition: 0.3s;
+                }
             .openbtn {
-                font-size: 18px;
-                padding: 0.45rem;
-                margin: 0.45rem;
-                background-color: rgba(0, 0, 0, 0.65);
-                text-shadow: 0.25rem 0.25rem 0.4rem rgba(255, 88, 222, 0.849);
-                border: 0.5px dashed rgba(255, 88, 222, 0.849);
+                font-size: 2rem;
+                margin: 0.5rem;
+                background-color: rgba(23, 24, 59, 0.80); /*Dark Blue*/
+                color: rgba(242, 232, 240, 100); /*Stone White*/
+                border: none;
             }
                 .openbtn:hover {
-                    color: rgb(161, 193, 0);
-                    text-shadow: 0.25rem 0.25rem 0.4rem rgba(189, 82, 0, 0.741);
-                    background-color: rgba(161, 0, 189, 0.741);
+                    color: rgba(115, 146, 181, 100); /*Dusty Denim*/
+                    text-shadow: 0.25rem 0.25rem 0.4rem rgba(131, 80, 196, 0.75); /*Deep Lilac*/
+                    background-color: rgba(120, 25, 245, 0.75); /*Bright Indigo*/
                 }
+            .menu-panel .closebtn {
+                position: absolute;
+                margin-left: 1rem;
+                top: 0;
+                right: 1rem;
+                font-size: 2.5rem; 
+            }
+            /*Main Content Box Styles*/
             .body-box {
                 display: flex;
                 justify-content: center;
@@ -464,12 +450,12 @@
             </div>
                 <div id="menu-panel" class="menu-panel">
                     <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">x</a>
-                    <a href="index.html">index</a>
-                    <a href="book-of-charms.html">book of charms</a>
-                    <a href="blog.html">blog</a>
-                    <a href="bookshelf.html">bookshelf</a>
-                    <a href="hopecore.html">hopecore</a>
-                    <a href="memeseum.html">memeseum</a>
+                    <a href="index.html"><p>index</p></a>
+                    <a href="book-of-charms.html"><p>book of charms</p></a>
+                    <a href="blog.html"><p>blog</p></a>
+                    <a href="bookshelf.html"><p>bookshelf</p></a>
+                    <a href="hopecore.html"><p>hopecore</p></a>
+                    <a href="memeseum.html"><p>memeseum</p></a>
                 </div>
                 <button class="openbtn" onClick="openNav()">𐂂</button>
             </div>
