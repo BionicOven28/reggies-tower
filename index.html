@@ -105,6 +105,10 @@
                 display: flex;
                 justify-content: center;
             }
+        .change-log-box {
+            display: flex;
+            width: 40%;
+        }
 
     /*S Mobile -- min 350w x 480h*/
         @media (min-width: 350px) {
@@ -240,6 +244,10 @@
                     background-color: rgba(161, 0, 189, 0.741);
                     color: rgba(242, 232, 240, 100); /*Stone White*/
                 }
+                    /*summary:hover {
+                        color: rgb(161, 193, 0);
+                        text-shadow: 0.25rem 0.25rem 0.4rem rgba(0, 0, 0, 0.70);
+                    }*/
 
         }
     /*L Mobile-- min 480w x 800h*/
@@ -405,6 +413,17 @@
         function closeNav() {
             document.getElementById("menu-panel").style.width = "0";
         }
+
+        const details = document.querySelectorAll("details");
+        details.forEach((targetDetail) => {
+            targetDetail.addEventListener("click", () => {
+                details.forEach((detail) => {
+                    if (detail !== targetDetail) {
+                        detail.removeAttribute("open");
+                    }
+                });
+            });
+        })
         
     </script>  
     </head>
@@ -457,6 +476,10 @@
             </div>
         <h2 class="change-log-title">change log</h2>
         <div class="change-log-box">
+            
+
+
+
             <details>
                 <summary><strong><p>16 July 2026</p></strong></summary>
                 <p>Working the specifics for the S Mobile layout. Adjusted some of the boxes and added content.</p>
