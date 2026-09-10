@@ -15,12 +15,28 @@
 <style>
     /*Reference Color Palette*/
 
+
+    /*Static Blog Entries Styles*/
+    [id] {
+	    display: none;
+    }
+    [id]:target {
+        display:block;
+    }
 </style>
 <script>
 
 </script>
 </head>
 <body>
-<h1>Title Here</h1>
-<p>paragraph content</p>
+    <h1>Title Here</h1>
+    <p>paragraph content</p>
+
+    <a href="#1">Entry 01</a><br>
+    <a href="#2">Entry 02</a><br>
+    <a href="#3">Entry 03</a><br>
+
+    <div id="1"><p>This is the first entry.</p></div>
+    <div id="2"><p>This is the second entry.</p></div>
+    <div id="3"><p>This is the third entry.</p></div>
 </body>
