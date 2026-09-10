@@ -202,22 +202,20 @@
                         position: relative;
                         display: flex;
                         overflow: hidden;
+                        white-space: nowrap;
                         user-select: none;
                         gap: var(--gap);
                     }
                     .marquee_content {
-                        display: flex;
+                        display: inline-flex;
                         flex-shrink: 0;
-                        justify-content: space-around;
                         gap: var(--gap);
                         min-width: 100%;
+                        animation: scroll 30s linear infinite;
                     }
-                    .marquee_content {
-                        animation: scroll 25s linear infinite;
-                    }
-                    .marquee-hover-pause:hover .marquee_content {
-                        animation-play-state: paused;
-                    }
+                        .marquee-hover-pause:hover .marquee_content {
+                            animation-play-state: paused;
+                        }
                     @keyframes scroll {
                         from {
                             transform: translateX(0);
