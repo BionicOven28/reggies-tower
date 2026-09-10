@@ -34,6 +34,7 @@
             font-family: "Tagesschrift", system-ui;
             font-weight: 200;
             text-transform: lowercase;
+            margin: 0;
         }
         p {
             font-family: "Roboto", sans-serif;
@@ -89,14 +90,13 @@
             background-color: rgba(23, 24, 59, 0.80); /*Dark Blue*/
             color: rgba(242, 232, 240, 100); /*Stone White*/
         }
-            .left-box {
+            .left-box, .middle-box, .right-box{
                 border: 1px solid red;
+                margin: 0.5rem;
             }
-            .middle-box {
-                border: 1px solid orange;
-            }
-            .right-box {
-                border: 1px solid yellow;
+            .blog-box {
+                border: 1px solid blue;
+                margin: 0.5rem;
             }
         .change-log-title {
             position: absolute;
@@ -129,6 +129,9 @@
             }
             h4 {
                 font-size: 0.85rem;
+            }
+            p {
+                font-size: 0.75rem;
             }
             /*Mobile Nav Menu + Pop-Out, ***Only Visible on Mobile***/
             .menu-panel {
@@ -175,7 +178,13 @@
                 margin-top: 1rem;
                 padding: 0.5rem;
             }
-                .left-box .middle-box .right-box {
+                .left-box, .middle-box, .right-box {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                }
+                .blog-box {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -413,17 +422,6 @@
         function closeNav() {
             document.getElementById("menu-panel").style.width = "0";
         }
-
-        /*const details = document.querySelectorAll("details");
-        details.forEach((targetDetail) => {
-            targetDetail.addEventListener("click", () => {
-                details.forEach((detail) => {
-                    if (detail !== targetDetail) {
-                        detail.removeAttribute("open");
-                    }
-                });
-            });
-        })*/
         
     </script>  
     </head>
@@ -433,13 +431,14 @@
                 <img id="glitter-title" src="https://www.gigaglitters.com/created/tFYPbmSOgw.gif" alt="http://www.rasaint.net/ - Glitter Graphics"><br>
             </div>
                 <div id="menu-panel" class="menu-panel">
-                    <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">close</a>
-                    <a href="index.html"><p>index</p></a>
-                    <a href="book-of-charms.html"><p>book of charms</p></a>
-                    <a href="blog.html"><p>blog</p></a>
-                    <a href="bookshelf.html"><p>bookshelf</p></a>
-                    <a href="hopecore.html"><p>hopecore</p></a>
-                    <a href="memeseum.html"><p>memeseum</p></a>
+                    <a href="javascript:void(0)" class="closebtn" onClick="closeNav()"><h2>close</h2></a>
+
+                    <a href="index.html"><h2>index</h2></a>
+                    <a href="book-of-charms.html"><h2>book of charms</h2></a>
+                    <a href="blog.html"><h2>blog</h2></a>
+                    <a href="bookshelf.html"><h2>bookshelf</h2></a>
+                    <a href="hopecore.html"><h2>hopecore</h2></a>
+                    <a href="memeseum.html"><h2>memeseum</h2></a>
                 </div>
                 <button class="openbtn" onClick="openNav()">𐂂</button>
             </div>
@@ -455,6 +454,9 @@
                 <div class="right-box">
                     <p>Currently Reading: <br/>"A Title of a Book Here" <br/>
                     a link to my <a href="bookshelf.html">bookshelf</a></p>
+                </div>
+                <div class="blog-box">
+                    <p>here is where i update my blog!</p>
                 </div>
             </div>
         </div>
@@ -476,10 +478,6 @@
             </div>
         <h2 class="change-log-title">change log</h2>
         <div class="change-log-box">
-            
-
-
-
             <details>
                 <summary><strong><p>16 July 2026</p></strong></summary>
                 <p>Working the specifics for the S Mobile layout. Adjusted some of the boxes and added content.</p>
@@ -491,46 +489,6 @@
             <details>
                 <summary><strong><p>12 Apr 2026</p></strong></summary>
                 <p>Created the memeseum page. Added a link to the memeseum from the about page. Worked on format and content for haunted forest page.</p>
-            </details>
-            <details>
-                <summary><strong><p>9 Apr 2026</p></strong></summary>
-                <p>Added the consistent styling for the navbar to the "about.html" page. Working on downloading all of my existing assets and content so I can move away from hotlinking media.</p>
-            </details>
-            <details>
-                <summary><strong><p>8 Apr 2026</p></strong></summary>
-                <p>Went back to the basic bones of my index page. Created "blog.html" and unlinked "about.html" from the navbar. Moved that to the intro box instead. Working a consistent navbar for each page that exists. Working on a template for blog posts.</p>
-            </details>
-            <details>
-                <summary><strong><p>6 Apr 2026</p></strong></summary>
-                <p>Began a losing fight trying to put my stamps inside a frame and hidden unless scrolled over. Morale is low. Removed some of the stamps while playing with it. Will return to this later, when I feel less defeated.</p>
-            </details>
-            <details>
-                <summary><strong><p>2 Apr 2026</p></strong></summary>
-                <p>Added reading-log.html page. Wrapped flex items in my stamps and blinkie box on the index page. Added the hopecore page and linked it in the nav bar.</p>
-            </details>
-            <details>
-                <summary><strong><p>1 Apr 2026</p></strong></summary>
-                <p>Worked on hover animation for navigation buttons. Built flex container for layout. Added custom scroll bars to both index page and change log box in bottom container on index page.</p>
-            </details>
-            <details>
-                <summary><strong><p>4 Jun 2025</p></strong></summary>
-                <p>Added breadcrumb navigation to index page and about pages. Have yet to connect other existing pages.</p>
-            </details>
-            <details>
-                <summary><strong><p>3 Jun 2025</p></strong></summary>
-                <p>Continued work on the viewport sized css for each page. Added backgrounds to the home page, the shrines index page, and the site map page.</p>
-            </details>
-            <details>
-                <summary><strong><p>9 May 2025</p></strong></summary>
-                <p>Combined CSS files and HTML files to streamline coding process. Added breakpoints via media queries for more viewport sizes. Added pages and built bones for more niche interests.</p>
-            </details>
-            <details>
-                <summary><strong><p>8 May 2025</p></strong></summary>
-                <p>Worked on responsive design for existing pages: established breakpoints for different device viewports.</p>
-            </details>
-            <details>
-                <summary><strong><p>7 May 2025</p></strong></summary>
-                <p>Built web pages "index.html" and "about.html".</p>
             </details>
         </div>
         <!---<div class="about">
@@ -544,7 +502,6 @@
                 <img class="bookshelfbtl" src="pics/bottles/bookshelf_bottle.png" onmouseover="this.src='pics/bottles/bookshelf_bottle_glowing.png'" onmouseout="this.src='pics/bottles/bookshelf_bottle.png'"/>
             </a>
             <span class="bookshelf_tooltip">bookshelf</span>
-        </div>--->
-        
+        </div>---> 
     </body>
 </html>
