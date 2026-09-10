@@ -25,7 +25,7 @@
         /*Dusty Denim: rgba(115, 146, 181, 100)*/
         /*Bright Indigo: rgba(120, 25, 245, 0.75)*/
     
-    /*Standard styles, not breakpoint dependent.*/
+/*>*//*Root / Standard Styles (Not Breakpoint Dependent)*/
         html {
             scrollbar-width: thin;
             scrollbar-color: rgba(201, 224, 235, 100) rgba(0, 0, 0, 0.65); /*Pale Sky*/
@@ -40,6 +40,7 @@
             margin: auto;
         }
         a {
+            font-family: 'Roboto', sans-serif;
             color: rgb(126, 42, 83); /*Dark Raspberry*/
             text-decoration: none;
             transition:
@@ -90,27 +91,27 @@
         }
             .left-box {
                 border: 1px solid red;
-                display: flex;
-                flex-flow: column;
-                justify-content: center;
             }
             .middle-box {
                 border: 1px solid orange;
-                display: flex;
-                justify-content: center;
-                text-align: center;
             }
             .right-box {
                 border: 1px solid yellow;
-                display: flex;
-                justify-content: center;
             }
+        .change-log-title {
+            position: absolute;
+            margin-left: 12rem;
+            margin-top: -0.5rem;
+            color: rgba(242, 232, 240, 100); /*Stone White*/
+            text-shadow: 0.25rem 0.25rem 0.4rem rgb(126, 42, 83); /*Dark Raspberry*/
+            text-transform: italic;
+        }
         .change-log-box {
             display: flex;
             width: 40%;
         }
 
-    /*S Mobile -- min 350w x 480h*/
+/*>*//*S Mobile -- min 350w x 480h*/
         @media (min-width: 350px) {
             body { /*Mobile-Only Style*/
                 background-image: url('pics/stars3.gif'); /*dark blue stars gif*/
@@ -118,7 +119,7 @@
                 background-size: cover; /*1vh doesn't work and breaks the gif*/
             }
             h1 {
-                font-size: 1.65rem;
+                font-size: 1.5rem;
             }
             h2 {
                 font-size: 1.35rem;
@@ -174,6 +175,12 @@
                 margin-top: 1rem;
                 padding: 0.5rem;
             }
+                .left-box .middle-box .right-box {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                }
                 /*Blinkie Marquee Box*/
                 .blinkie-box {
                     display: flex;
@@ -210,13 +217,6 @@
                             transform: translateX(calc(-100% - var(--gap)));
                         }
                     }
-            .change-log-title {
-                position: absolute;
-                margin-left: 12rem;
-                margin-top: -0.5rem;
-                color: rgba(242, 232, 240, 100); /*Stone White*/
-                text-shadow: 0.25rem 0.25rem 0.4rem rgb(126, 42, 83); /*Dark Raspberry*/
-            }
             .change-log-box {
                 display: flex;
                 flex-flow: row wrap;
@@ -250,7 +250,7 @@
                     }*/
 
         }
-    /*L Mobile-- min 480w x 800h*/
+/*>*//*L Mobile -- min 480w x 800h*/
         @media (min-width: 480px) {
             body { /*Mobile-Only Style*/
                 background-image: url('pics/stars3.gif'); /*dark blue stars gif*/
@@ -340,7 +340,7 @@
                 scrollbar-color: rgb(161, 193, 0) rgba(0, 0, 0, 0.65);
             }
         }
-        /*XL Mobile / Tablets -- min 768px*/
+/*>*//*XL Mobile (Tablets) -- min 768w*/
         @media (min-width: 768px) {
             body { /*Mobile-Only Style*/
                 background-image: url('pics/stars3.gif'); /*dark blue stars gif*/
@@ -348,7 +348,7 @@
                 background-size: cover; /*1vh doesn't work and breaks the gif*/
             }
         }
-        /*S Desktop -- min 1024px*/
+/*>*//*S Desktop -- min 1024w*/
         @media (min-width: 1024px) {
         /*about.html bottle + tooltip styles*/
         /*.aboutbtl {
@@ -391,10 +391,10 @@
                 opacity: 1;
             }*/
         }
-        /*M Desktop -- min 1200px*/
+/*>*//*M Desktop -- min 1200w*/
         @media (min-width: 1200px) {
         }
-        /*L Desktop -- min 1440px*/
+/*>*//*L Desktop -- min 1440w*/
         @media (min-width: 1440px) {
         }
         /*.nav-bar {
@@ -414,7 +414,7 @@
             document.getElementById("menu-panel").style.width = "0";
         }
 
-        const details = document.querySelectorAll("details");
+        /*const details = document.querySelectorAll("details");
         details.forEach((targetDetail) => {
             targetDetail.addEventListener("click", () => {
                 details.forEach((detail) => {
@@ -423,7 +423,7 @@
                     }
                 });
             });
-        })
+        })*/
         
     </script>  
     </head>
