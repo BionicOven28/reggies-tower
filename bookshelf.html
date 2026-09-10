@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <style>
+/*>>>   Root / Standard Styles (Not Breakpoint Dependent)*/
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Tagesschrift', serif;
+            font-weight: 300;
+        }
+        p {
+            font-family: 'Roboto', sans-serif;
+        }
+        li {
+            list-style-type: none;
+            margin-bottom: 0.5rem;
+        }
+        button {
+            background-color: white;
+            color: black;
+            border: 1px solid blue;
+        }
+
+    </style>
+    <script>
+        const tags = document.querySelectorAll('#tags > button');
+        const posts = document.querySelectorAll('#posts > div');
+        const displayAll = document.getElementById('all');
+
+        console.log(posts.length);
+
+        displayAll.addEventListener('click', event => {
+            for (let i = 0; i < posts.length; i++) {
+                posts[i].style.display = "list-item";
+            }
+        });
+
+        for (let i = 0; i < tags.length; i++) {
+            /*when a tag button is clicked*/
+            tags[i].addEventListener('click', event => {
+                /*get the class of the clicked button*/
+                const tagClass = event.target.className;
+
+                /*loop through all posts*/
+                for (let j = 0; j < posts.length; j++) {
+                    /*if the post has the same class as the clicked button, display it, otherwise hide it*/
+                    if (posts[j].classList.contains(tagClass)) {
+                        posts[j].style.display = "list-item";
+                    } else {
+                        posts[j].style.display = "none";
+                    }
+                }
+            })
+        };
+
+    </script>
+</head>
+
+<body>
+    <h1>bookshelf</h1>
+    <p>this page is under construction!</p>
+
+    <div class="tags">
+        <strong>tag</strong><br>
+        <span id="all"><button class="all">all tags</button></span>
+        <span id="tags">
+            <button class="gold-star">favorites</button>
+            <button class="101">101 books</button>
+            <button class="afm">appalachian folk magic</button>
+            <button class="sfm">scottish folk magic</button>
+            <button class="owned">books i own</button>
+        </span>
+    </div>
+    <br>
+    <div id="posts">
+        <div class="gold-star">
+            <h3>favorites</h3>
+            <li><span><img src="#" href="link to book">1st favorite book</img><br>here's a brief description</span></li>
+        </div>
+    </div>
+</body>
