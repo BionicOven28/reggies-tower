@@ -121,6 +121,38 @@
             h1 {
                 font-size: 1.5rem;
             }
+                .glow1 {
+                    color: #fff;
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de;
+                    text-align: center;
+                    -webkit-animation: glow 1s ease-in-out infinite alternate;
+                    -moz-animation: glow 1s ease-in-out infinite alternate;
+                    animation: glow 1s ease-in-out infinite alternate; 
+                }
+                @webkit-keyframes glow {
+                    from {
+                        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de;
+                    }
+                    to {
+                        text-shadow: 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow, 0 0 60px yellow, 0 0 70px yellow, 0 0 80px yellow;
+                    }
+                }
+                @moz-keyframes glow {
+                    from {
+                        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de;
+                    }
+                    to {
+                        text-shadow: 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow, 0 0 60px yellow, 0 0 70px yellow, 0 0 80px yellow;
+                    }
+                }
+                @keyframes glow {
+                    from {
+                        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de;
+                    }
+                    to {
+                        text-shadow: 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow, 0 0 60px yellow, 0 0 70px yellow, 0 0 80px yellow;
+                    }
+                }
             h2 {
                 font-size: 1.35rem;
             }
@@ -427,6 +459,7 @@
         <div class="header-box">
             <div class="title-box">
                 <img id="glitter-title" src="https://www.gigaglitters.com/created/tFYPbmSOgw.gif" alt="http://www.rasaint.net/ - Glitter Graphics"><br>
+                <h1 class="glow1">haunted tower</h1>
             </div>
                 <div id="menu-panel" class="menu-panel">
                     <a href="javascript:void(0)" class="closebtn" onClick="closeNav()"><h2>close</h2></a>
