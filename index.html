@@ -13,7 +13,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-        
 
     <style>
     /*Reference color palette*/
@@ -28,13 +27,13 @@
 /*>>>   Root / Standard Styles (Not Breakpoint Dependent)*/
         html {
             scrollbar-width: thin;
-            scrollbar-color: rgba(201, 224, 235, 100) rgba(0, 0, 0, 0.65); /*Pale Sky*/
+            scrollbar-color: rgba(115, 146, 181, 100) rgba(0, 0, 0, 0.65); /*Dusty Denim*/
         }
         h1, h2, h3, h4, h5 {
             font-family: "Tagesschrift", system-ui;
             font-weight: 200;
             text-transform: lowercase;
-            margin: 0;
+            margin: auto;
         }
         p {
             font-family: "Roboto", sans-serif;
@@ -75,8 +74,6 @@
             background-color: rgba(23, 24, 59, 0.80); /*Dark Blue*/
             padding: 0.50rem;
             margin: 0.50rem;
-            color: rgba(242, 232, 240, 100); /*Stone White*/
-            text-shadow: 0.25rem 0.25rem 0.4rem rgba(131, 80, 196, 0.75); /*Deep Lilac*/
         }
         #glitter-title {
             width: 70vw;
@@ -175,7 +172,8 @@
                 border: 1px solid rgb(186, 113, 162); /*Pearly Purple*/
             }
                 a:hover {
-                    display: none;
+                    text-shadow: none;
+                    letter-spacing: 0;
                 }
             /*Mobile Nav Menu + Pop-Out, ***Only Visible on Mobile***/
             .menu-panel {
@@ -234,40 +232,10 @@
                     justify-content: center;
                     text-align: center;
                 }
-                /*Blinkie Marquee Box*/
+                /*Blinkie Marquee Box Does Not Display On Mobile*/
                 .blinkie-box {
-                    display: flex;
-                    flex-flow: row wrap;
-                    justify-content: space-evenly;
-                    margin: 1rem;
+                    display: none;
                 }
-                    .marquee {
-                        --gap: 1rem;
-                        position: relative;
-                        display: flex;
-                        overflow: hidden;
-                        white-space: nowrap;
-                        user-select: none;
-                        gap: var(--gap);
-                    }
-                    .marquee_content {
-                        display: inline-flex;
-                        flex-shrink: 0;
-                        gap: var(--gap);
-                        min-width: 100%;
-                        animation: scroll 30s linear infinite;
-                    }
-                        .marquee-hover-pause:hover .marquee_content {
-                            animation-play-state: paused;
-                        }
-                    @keyframes scroll {
-                        from {
-                            transform: translateX(0);
-                        }
-                        to {
-                            transform: translateX(calc(-100% - var(--gap)));
-                        }
-                    }
             .change-log-box {
                 display: flex;
                 flex-flow: row wrap;
@@ -505,14 +473,12 @@
                 </div>
             </div>
         </div>
-            <div class="blinkie-box marquee marquee-hover-pause">
+            <!---<div class="blinkie-box marquee marquee-hover-pause">
                 <ul class="marquee_content">
                     <li><img src="pics/blinkies-stamps/antiterf.png"/></li>
-                    <li><img src="pics/blinkies-stamps/raichudonut.png"/></li>
                     <li><img src="pics/blinkies-stamps/raichu1.png"/></li>
                     <li><img src="pics/blinkies-stamps/ampharos1.png"/></li>
                     <li><img src="pics/blinkies-stamps/totallyrad.gif"/></li>
-                    <li><img src="pics/blinkies-stamps/disabled.png"/></li>
                     <li><img src="pics/blinkies-stamps/nyan1.gif"/></li>
                     <li><img src="pics/blinkies-stamps/vultureculture.jpg"></li>
                     <li><img src="pics/blinkies-stamps/lovemoss.png"/></li>
@@ -520,7 +486,7 @@
                     <li><img src="pics/blinkies-stamps/medievalyikes.png"/></li>
                     <li><img src="pics/blinkies-stamps/iheartpaleontology.png"/></li>
                 </ul>
-            </div>
+            </div>--->
         <h2 class="change-log-title">change log</h2>
         <div class="change-log-box">
             <details>
