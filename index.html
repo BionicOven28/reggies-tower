@@ -72,6 +72,7 @@
         .title-box {
             display: flex;
             box-sizing: border-box;
+            padding: 1rem;
         }
         /*Main Content Boxes*/
         .body-box {
@@ -87,6 +88,10 @@
             .blog-box {
                 border: 1px solid blue;
                 margin: 0.5rem;
+            }
+            .blinkie-box {
+                display: flex;
+                flex-flow: row wrap;
             }
         .change-log-title {
             position: absolute;
@@ -104,7 +109,7 @@
 /*>>>   S Mobile -- min 350w x 480h*/
         @media (min-width: 350px) {
             body { /*Mobile-Only Style*/
-                background-image: url('pics/stars3.gif'); /*dark blue stars gif*/
+                background-image: url('pics/bgs/stars3.gif'); /*dark blue stars gif*/
                 background-repeat: repeat;
                 background-size: cover; /*1vh doesn't work and breaks the gif*/
             }
@@ -187,16 +192,16 @@
                     transition: 0.3s;
                 }
             .openbtn {
-                font-size: 2rem;
-                margin: 0.5rem;
-                background-color: rgba(23, 24, 59, 0.80); /*Dark Blue*/
-                color: rgba(242, 232, 240, 100); /*Stone White*/
-                border: none;
+                border: 1px solid red;
+            }
+            .book {
+                max-width: 50%;
             }
                 .openbtn:hover {
-                    color: rgba(115, 146, 181, 100); /*Dusty Denim*/
-                    text-shadow: 0.25rem 0.25rem 0.4rem rgba(131, 80, 196, 0.75); /*Deep Lilac*/
-                    background-color: rgba(120, 25, 245, 0.75); /*Bright Indigo*/
+                    border: 1px solid blue;
+                }
+                .book:hover {
+                    max-width: 50%;
                 }
             .menu-panel .closebtn {
                 position: absolute;
@@ -442,7 +447,7 @@
                     <a href="hopecore.html"><h2>hopecore</h2></a>
                     <a href="memeseum.html"><h2>memeseum</h2></a>
                 </div>
-                <button class="openbtn" onClick="openNav()">𐂂</button>
+                <button class="openbtn" onClick="openNav()"><img src="pics/assets/ancientbook.png" class="book" alt="Open Menu"/></button>
             </div>
         <div class="body-box">
             <div class="left-right">
