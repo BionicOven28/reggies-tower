@@ -33,7 +33,6 @@
             font-family: "Tagesschrift", system-ui;
             font-weight: 200;
             text-transform: lowercase;
-            margin: auto;
         }
         p {
             font-family: "Roboto", sans-serif;
@@ -68,17 +67,11 @@
         /*Title Box*/
         .header-box {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
         }
         .title-box {
-            background-color: rgba(23, 24, 59, 0.80); /*Dark Blue*/
-            padding: 0.50rem;
-            margin: 0.50rem;
-        }
-        #glitter-title {
-            width: 70vw;
-            height: auto;
-            margin-top: 0.85rem;
+            display: flex;
+            box-sizing: border-box;
         }
         /*Main Content Boxes*/
         .body-box {
@@ -437,7 +430,6 @@
     <body>
         <div class="header-box">
             <div class="title-box">
-                <img id="glitter-title" src="https://www.gigaglitters.com/created/tFYPbmSOgw.gif" alt="http://www.rasaint.net/ - Glitter Graphics"><br>
                 <h1 class="glow1">haunted tower</h1>
             </div>
                 <div id="menu-panel" class="menu-panel">
