@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
     <style>
-    /*Reference color palette*/
+    /*Reference Color Palette*/
         /*Stone White: rgba(242, 232, 240, 100)*/
         /*Dark Blue: rgba(23, 24, 59, 0.80)*/
         /*Dark Raspberry: rgb(126, 42, 83)*/
@@ -116,40 +116,39 @@
                 background-size: cover; /*1vh doesn't work and breaks the gif*/
             }
             h1 {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
                 .glow1 {
-                    color: #fff;
-                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de;
+                    color: rgba(242, 232, 240, 100); /*Stone White*/
+                    text-shadow: 
+                        0 0 0.1rem rgb(242, 232, 240, 100), /*Stone White*/ 
+                        0 0 0.2rem rgb(126, 42, 83), /*Dark Raspberry*/
+                        0 0 0.3rem rgb(126, 42, 83), /*Dark Raspberry*/
+                        0 0 0.4rem rgb(126, 42, 83), /*Dark Raspberry*/
+                        0 0 0.5rem rgb(126, 42, 83); /*Dark Raspberry*/
                     text-align: center;
-                    -webkit-animation: glow 1s ease-in-out infinite alternate;
-                    -moz-animation: glow 1s ease-in-out infinite alternate;
-                    animation: glow 1s ease-in-out infinite alternate; 
+                    -webkit-animation: glow 3s ease-in-out infinite alternate;
+                    -moz-animation: glow 3s ease-in-out infinite alternate;
+                    animation: glow 3s ease-in-out infinite alternate; 
                 }
-                @-webkit-keyframes glow {
-                    from {
-                        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de;
+                    @keyframes glow {
+                        from {
+                            text-shadow: 
+                                0 0 0.5rem rgb(242, 232, 240, 100), /*Stone White*/
+                                0 0 1rem rgb(126, 42, 83), /*Dark Raspberry*/
+                                0 0 1.5rem rgb(126, 42, 83), /*Dark Raspberry*/
+                                0 0 2rem rgb(126, 42, 83), /*Dark Raspberry*/
+                                0 0 2.5rem rgb(126, 42, 83); /*Dark Raspberry*/
+                        }
+                        to {
+                            text-shadow: 
+                                0 0 0.5rem rgb(242, 232, 240, 100), /*Stone White*/
+                                0 0 1rem rgba(120, 25, 245, 0.75), /*Bright Indigo*/
+                                0 0 1.5rem rgba(120, 25, 245, 0.75), /*Bright Indigo*/
+                                0 0 2rem rgba(120, 25, 245, 0.75), /*Bright Indigo*/ 
+                                0 0 2.5rem rgba(120, 25, 245, 0.75); /*Bright Indigo*/
+                        }
                     }
-                    to {
-                        text-shadow: 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow, 0 0 60px yellow, 0 0 70px yellow, 0 0 80px yellow;
-                    }
-                }
-                @-moz-keyframes glow {
-                    from {
-                        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de;
-                    }
-                    to {
-                        text-shadow: 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow, 0 0 60px yellow, 0 0 70px yellow, 0 0 80px yellow;
-                    }
-                }
-                @keyframes glow {
-                    from {
-                        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de;
-                    }
-                    to {
-                        text-shadow: 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow, 0 0 60px yellow, 0 0 70px yellow, 0 0 80px yellow;
-                    }
-                }
             h2 {
                 font-size: 1.35rem;
             }
