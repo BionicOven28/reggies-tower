@@ -27,7 +27,6 @@
 /*>>>   Root / Standard Styles (Not Breakpoint Dependent)*/
         html {
             scrollbar-width: thin;
-            scrollbar-color: rgba(115, 146, 181, 100) rgba(0, 0, 0, 0.65); /*Dusty Denim*/
         }
         h1, h2, h3, h4, h5 {
             font-family: "Tagesschrift", system-ui;
@@ -109,6 +108,9 @@
 
 /*>>>   S Mobile -- min 350w x 480h*/
         @media (min-width: 350px) {
+            html {
+                scrollbar-color: rgba(115, 146, 181, 100) rgba(0, 0, 0, 0.65);
+            }
             body { /*Mobile-Only Style*/
                 background-image: url('pics/bgs/stars3.gif'); /*dark blue stars gif*/
                 background-repeat: repeat;
@@ -410,9 +412,20 @@
         }
 /*>>>   M Desktop -- min 1200w*/
         @media (min-width: 1200px) {
+            html {
+            }
         }
 /*>>>   L Desktop -- min 1440w*/
         @media (min-width: 1440px) {
+            html {
+                scrollbar-width: thin;
+                scrollbar-color: rgb(161, 193, 0) rgba(0, 0, 0, 0.65);
+            }
+            body {
+                background-image: url('pics/bgs/graveyard.jpg'); /*pixel graveyard img*/
+                background-repeat: no-repeat;
+                background-size: 100vw 100vh;
+            }
         }
         /*.nav-bar {
             text-align: center;
