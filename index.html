@@ -67,11 +67,12 @@
         /*Title Box*/
         .header-box {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
+            border: 1px solid red;
         }
         .title-box {
             display: flex;
-            box-sizing: border-box;
+            justify-content: center;
             padding: 1rem;
         }
         /*Main Content Boxes*/
@@ -191,17 +192,17 @@
                     padding: 0.5rem;
                     transition: 0.3s;
                 }
-            .openbtn {
+            #bookbtn {
+                max-width: 100%;
+                height: auto;
+                width: 30%;
                 border: 1px solid red;
             }
-            .book {
-                max-width: 50%;
-            }
-                .openbtn:hover {
-                    border: 1px solid blue;
-                }
-                .book:hover {
-                    max-width: 50%;
+                #bookbtn:hover {
+                    content: url('pics/assets/ancientbook_open.png');
+                    max-width: 100%;
+                    height: auto;
+                    width: 30%;
                 }
             .menu-panel .closebtn {
                 position: absolute;
@@ -447,7 +448,7 @@
                     <a href="hopecore.html"><h2>hopecore</h2></a>
                     <a href="memeseum.html"><h2>memeseum</h2></a>
                 </div>
-                <button class="openbtn" onClick="openNav()"><img src="pics/assets/ancientbook.png" class="book" alt="Open Menu"/></button>
+                <div class="openbtn" onClick="openNav()"><img src="pics/assets/ancientbook.png" id="bookbtn"/></div>
             </div>
         <div class="body-box">
             <div class="left-right">
