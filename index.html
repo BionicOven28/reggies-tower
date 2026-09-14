@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
     <style>
-    /*Reference Color Palette*/
+    /*Reference Color Palette --- S, L, XL Mobile*/
         /*Stone White: rgba(242, 232, 240, 100)*/
         /*Dark Blue: rgba(23, 24, 59, 0.80)*/
         /*Dark Raspberry: rgb(126, 42, 83)*/
@@ -23,6 +23,16 @@
         /*Deep Lilac: rgba(131, 80, 196, 0.75)*/
         /*Dusty Denim: rgba(115, 146, 181, 100)*/
         /*Bright Indigo: rgba(120, 25, 245, 0.75)*/
+    
+    /*Reference Color Palette --- S, M, L Desktop*/
+        /*Cream: #fff4c7*/
+        /*Half 'n Half': #fde4ae*/
+        /*Burnt Orange: #9f3428*/
+        /*Pumpkin: #b5512d*/
+        /*Wet Clay: #927f65*/
+        /*Dark Stone: #281506*/
+        /*Slate: #211b1b*/
+        /*Storm Cloud: #4f4c45*/
     
 /*>>>   Root / Standard Styles (Not Breakpoint Dependent)*/
         html {
@@ -33,13 +43,74 @@
             font-weight: 200;
             text-transform: lowercase;
         }
+        .glow1 {
+            color: rgba(242, 232, 240, 100); /*Stone White*/
+            text-shadow: 
+                0 0 0.1rem rgb(242, 232, 240, 100), /*Stone White*/ 
+                0 0 0.2rem rgb(126, 42, 83), /*Dark Raspberry*/
+                0 0 0.3rem rgb(126, 42, 83), /*Dark Raspberry*/
+                0 0 0.4rem rgb(126, 42, 83), /*Dark Raspberry*/
+                0 0 0.5rem rgb(126, 42, 83); /*Dark Raspberry*/
+            text-align: center;
+            -webkit-animation: glow 3s ease-in-out infinite alternate;
+            -moz-animation: glow 3s ease-in-out infinite alternate;
+            animation: glow 3s ease-in-out infinite alternate; 
+        }
+            @keyframes glow {
+                from {
+                    text-shadow: 
+                        0 0 0.5rem rgb(242, 232, 240, 100), /*Stone White*/
+                        0 0 1rem rgb(126, 42, 83), /*Dark Raspberry*/
+                        0 0 1.5rem rgb(126, 42, 83), /*Dark Raspberry*/
+                        0 0 2rem rgb(126, 42, 83), /*Dark Raspberry*/
+                        0 0 2.5rem rgb(126, 42, 83); /*Dark Raspberry*/
+                    }
+                to {
+                    text-shadow: 
+                        0 0 0.5rem rgb(242, 232, 240, 100), /*Stone White*/
+                        0 0 1rem rgba(120, 25, 245, 0.75), /*Bright Indigo*/
+                        0 0 1.5rem rgba(120, 25, 245, 0.75), /*Bright Indigo*/
+                        0 0 2rem rgba(120, 25, 245, 0.75), /*Bright Indigo*/ 
+                        0 0 2.5rem rgba(120, 25, 245, 0.75); /*Bright Indigo*/
+                    }
+                }
+        .glow2 {
+            color: #fff4c7; /*Cream*/
+            text-shadow: 
+                0 0 0.1rem #fff4c7, /*Cream*/ 
+                0 0 0.2rem #b5512d, /*Pumpkin*/
+                0 0 0.3rem #b5512d, /*Pumpkin*/
+                0 0 0.4rem #b5512d, /*Pumpkin*/
+                0 0 0.5rem #b5512d; /*Pumpkin*/
+            text-align: center;
+            -webkit-animation: glow 3s ease-in-out infinite alternate;
+            -moz-animation: glow 3s ease-in-out infinite alternate;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+            @keyframes glow {
+                from {
+                    text-shadow: 
+                        0 0 0.5rem #fff4c7, /*Stone White*/
+                        0 0 1rem #b5512d, /*Pumpkin*/
+                        0 0 1.5rem #b5512d, /*Pumpkin*/
+                        0 0 2rem #b5512d, /*Pumpkin*/
+                        0 0 2.5rem #b5512d; /*Pumpkin*/
+                }
+                to {
+                    text-shadow: 
+                        0 0 0.5rem #fff4c7, /*Stone White*/
+                        0 0 1rem #281506, /*Dark Stone*/
+                        0 0 1.5rem #281506, /*Dark Stone*/
+                        0 0 2rem #281506, /*Dark Stone*/
+                        0 0 2.5rem #281506; /*Dark Stone*/
+                    }
+                }
         p {
             font-family: "Roboto", sans-serif;
             margin: auto;
         }
         a {
             font-family: 'Roboto', sans-serif;
-            color: rgb(126, 42, 83); /*Dark Raspberry*/
             text-decoration: none;
             transition:
                 color 0.55s ease-out, 
@@ -120,37 +191,6 @@
             h1 {
                 font-size: 2rem;
             }
-                .glow1 {
-                    color: rgba(242, 232, 240, 100); /*Stone White*/
-                    text-shadow: 
-                        0 0 0.1rem rgb(242, 232, 240, 100), /*Stone White*/ 
-                        0 0 0.2rem rgb(126, 42, 83), /*Dark Raspberry*/
-                        0 0 0.3rem rgb(126, 42, 83), /*Dark Raspberry*/
-                        0 0 0.4rem rgb(126, 42, 83), /*Dark Raspberry*/
-                        0 0 0.5rem rgb(126, 42, 83); /*Dark Raspberry*/
-                    text-align: center;
-                    -webkit-animation: glow 3s ease-in-out infinite alternate;
-                    -moz-animation: glow 3s ease-in-out infinite alternate;
-                    animation: glow 3s ease-in-out infinite alternate; 
-                }
-                    @keyframes glow {
-                        from {
-                            text-shadow: 
-                                0 0 0.5rem rgb(242, 232, 240, 100), /*Stone White*/
-                                0 0 1rem rgb(126, 42, 83), /*Dark Raspberry*/
-                                0 0 1.5rem rgb(126, 42, 83), /*Dark Raspberry*/
-                                0 0 2rem rgb(126, 42, 83), /*Dark Raspberry*/
-                                0 0 2.5rem rgb(126, 42, 83); /*Dark Raspberry*/
-                        }
-                        to {
-                            text-shadow: 
-                                0 0 0.5rem rgb(242, 232, 240, 100), /*Stone White*/
-                                0 0 1rem rgba(120, 25, 245, 0.75), /*Bright Indigo*/
-                                0 0 1.5rem rgba(120, 25, 245, 0.75), /*Bright Indigo*/
-                                0 0 2rem rgba(120, 25, 245, 0.75), /*Bright Indigo*/ 
-                                0 0 2.5rem rgba(120, 25, 245, 0.75); /*Bright Indigo*/
-                        }
-                    }
             h2 {
                 font-size: 1.35rem;
             }
@@ -422,21 +462,32 @@
         @media (min-width: 1440px) {
             html {
                 scrollbar-width: thin;
-                scrollbar-color: rgb(161, 193, 0) rgba(0, 0, 0, 0.65);
+                scrollbar-color: #b5512d rgba(0, 0, 0, 0.65);
             }
             body {
-                background-image: url('pics/bgs/graveyard.jpg'); /*pixel graveyard img*/
+                background-image: url('pics/bgs/graveyard.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: ;
+                position: relative;
+            }
+            h1 {
+                font-size: 3rem;
+            }
+            .bg-box {
+                border: 1px solid red;
+                max-height: 100vh;
+                width: 100vw;
+                background-image: url('pics/bgs/graveyard.jpg');
                 background-repeat: no-repeat;
                 background-size: 100vw 100vh;
+                margin: auto;
+            }
+            /*mobile nav menu button, only visible on mobile, hidden on desktop*/
+            #bookbtn {
+                display: none;
             }
         }
-        /*.nav-bar {
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.60);
-            border: 1px solid purple;
-            padding: 0.65em;
-            border-radius: 2rem;
-        }*/
     </style>
     <script>
         function openNav() {
@@ -449,10 +500,19 @@
     </script>  
     </head>
     <body>
+        <div class="bg-box">
+            box
+        </div>
+
+
+
+
         <div class="header-box">
-            <div class="title-box">
-                <h1 class="glow1">haunted tower</h1>
-            </div>
+            <h1 class="glow1">haunted tower</h1>
+        </div>
+            
+            
+            
                 <div id="menu-panel" class="menu-panel">
                     <a href="javascript:void(0)" class="closebtn" onClick="closeNav()"><h2>close</h2></a>
 
@@ -464,7 +524,7 @@
                     <a href="memeseum.html"><h2>memeseum</h2></a>
                 </div>
                 <img src="pics/assets/ancientbook.png" id="bookbtn" onClick="openNav()"/>
-            </div>
+        </div>
         <!---<div class="body-box">
             <div class="left-right">
                 <div class="left-box">
