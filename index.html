@@ -213,7 +213,7 @@
                 background-color: rgba(23, 24, 59, 0.80); /*Dark Blue*/
                 overflow-x: hidden;
                 padding-top: 20vh;
-                transition: 0.35s;
+                transition: 0.35s;  
             }
                 .menu-panel a {
                     display: block;
@@ -544,7 +544,7 @@
                     max-width: 5%;
                     height: auto;
                 }
-            #purple {
+            #purple { /*book of charms*/
                 position: absolute;
                 z-index: 6;
                 margin-left: 76%;
@@ -557,7 +557,7 @@
                     max-width: 5%;
                     height: auto;
                 }
-            #orange {
+            #orange { /*manifestos*/
                 position: absolute;
                 z-index: 7;
                 margin-left: 91%;
@@ -571,26 +571,8 @@
                     height: auto;
                 }
             
-                /*Tooltips for Blue Bottle Menu*/
-            .tooltip {
-                position: relative;
-                display: inline-block;
-                border: 0.5rem solid #fff4c7; /*Cream*/
-                border-radius: 25%;
-            }
-            .tooltiptext {
-                visibility: hidden;
-                width: 2rem;
-                background-color: #281506; /*Dark Stone*/
-                color: #fff4c7; /*Cream*/
-                text-align: center;
-                padding: 1rem;
-                position: absolute;
-                z-index: 0;
-            }
-            .tooltip:hover .tooltiptext span {
-                visibility: visible;
-            }
+            /*Tooltips for Blue Bottle Menu*/
+            
         }
     </style>
     <script>
@@ -634,7 +616,6 @@
         </a>
         <a href="book-of-charms.html">
             <img src="pics/assets/bottle_purple.png" id="purple"/>
-            <span class="tooltiptext">book of charms</span>
         </a>
         <a href="manifesto.html">
             <img src="pics/assets/bottle_orange.png" id="orange"/>
