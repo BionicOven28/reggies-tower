@@ -122,8 +122,6 @@
                     letter-spacing 0.55s ease-out;
         }
             a:hover {
-                color: rgb(186, 113, 162); /*Pearly Purple*/
-                text-shadow: 0.25rem 0.25rem 0.4rem rgba(131, 80, 196, 0.75); /*Deep Lilac*/
                 letter-spacing: 0.2rem;
             }
         ul {
@@ -133,18 +131,6 @@
         li {
             display: block;
             text-align: center;
-        }
-        /*Title Box*/
-        /*.header-box {
-            display: flex;
-            margin: auto;
-            justify-content: space-evenly;
-            border: 1px solid red;
-        }
-        .title-box {
-            display: flex;
-            justify-content: center;
-            padding: 1rem;
         }
         /*Main Content Boxes*/
         /*.body-box {
@@ -178,8 +164,8 @@
             width: 40%;
         }*/
 
-/*>>>   S Mobile -- min 350w x 480h*/
-        @media (min-width: 350px) {
+/*>>>   S Mobile -- max 350w x 480h*/
+        @media (max-width: 350px) {
             html {
                 scrollbar-color: rgba(115, 146, 181, 100) rgba(0, 0, 0, 0.65);
             }
@@ -310,8 +296,8 @@
                     }*/
 
         }
-/*>>>   L Mobile -- min 480w x 800h*/
-        @media (min-width: 480px) {
+/*>>>   L Mobile -- max 480w x 800h*/
+        @media (max-width: 480px) {
             body { /*Mobile-Only Style*/
                 background-image: url('pics/stars3.gif'); /*dark blue stars gif*/
                 background-repeat: repeat;
@@ -400,16 +386,16 @@
                 scrollbar-color: rgb(161, 193, 0) rgba(0, 0, 0, 0.65);
             }
         }
-/*>>>   XL Mobile (Tablets) -- min 768w*/
-        @media (min-width: 768px) {
+/*>>>   XL Mobile (Tablets) -- max 768w*/
+        @media (max-width: 768px) {
             body { /*Mobile-Only Style*/
                 background-image: url('pics/stars3.gif'); /*dark blue stars gif*/
                 background-repeat: repeat;
                 background-size: cover; /*1vh doesn't work and breaks the gif*/
             }
         }
-/*>>>   S Desktop -- min 1024w*/
-        @media (min-width: 1024px) {
+/*>>>   S Desktop -- max 1024w*/
+        @media (max-width: 1024px) {
         /*about.html bottle + tooltip styles*/
         /*.aboutbtl {
             position: absolute;
@@ -451,15 +437,15 @@
                 opacity: 1;
             }*/
         }
-/*>>>   M Desktop -- min 1200w*/
-        @media (min-width: 1200px) {
+/*>>>   M Desktop -- max 1200w*/
+        @media (max-width: 1200px) {
             html {
                 scrollbar-color: rgb(161, 193, 0) rgba(0, 0, 0, 0.65);
                 scrollbar-width: thin;
             }
         }
-/*>>>   L Desktop -- min 1440w*/
-        @media (min-width: 1440px) {
+/*>>>   L Desktop -- min 1201*/
+        @media (min-width: 1201px) {
             html {
                 scrollbar-width: thin;
                 scrollbar-color: #b5512d rgba(0, 0, 0, 0.65);
@@ -468,24 +454,128 @@
                 background-image: url('pics/bgs/graveyard.jpg');
                 background-repeat: no-repeat;
                 background-size: cover;
-                background-position: ;
+                background-position: initial;
                 position: relative;
             }
             h1 {
-                font-size: 3rem;
+                font-size: 4rem;
             }
-            .bg-box {
-                border: 1px solid red;
-                max-height: 100vh;
-                width: 100vw;
-                background-image: url('pics/bgs/graveyard.jpg');
-                background-repeat: no-repeat;
-                background-size: 100vw 100vh;
-                margin: auto;
+            .title-box {
+                position: absolute;
+                z-index: 0;
+                margin-top: 17%;
+                margin-left: 37%;
             }
+
             /*mobile nav menu button, only visible on mobile, hidden on desktop*/
             #bookbtn {
                 display: none;
+            }
+            .menu-panel {
+                display: none;
+            }
+                .menu-panel a {
+                    display: none;
+                }
+
+            /*Desktop Nav Menu -- "Blue Bottle Tree"*/
+            #blue { /*about.html*/
+                position: absolute;
+                z-index: 1;
+                margin-left: 25%;
+                margin-top: 23.5%;
+                max-width: 5%;
+                height: auto;
+            }
+                #blue:hover {
+                    content: url('pics/assets/bottle_blueglow.png');
+                    max-width: 5%;
+                    height: auto;
+                }
+            #red { /*memeseum*/
+                position: absolute;
+                z-index: 2;
+                margin-left: 21%;
+                margin-top: 8%;
+                max-width: 5%;
+                height: auto;
+            }
+                #red:hover {
+                    content: url('pics/assets/bottle_redglow.png');
+                    max-width: 5%;
+                    height: auto;
+                }
+            #yellow { /*hopecore*/
+                position: absolute;
+                z-index: 3;
+                margin-left: 55%;
+                margin-top: 12%;
+                max-width: 5%;
+                height: auto;
+            }
+                #yellow:hover {
+                    content: url('pics/assets/bottle_yellowglow.png');
+                    max-width: 5%;
+                    height: auto;
+                }
+            #brown { /*bookshelf*/
+                position: absolute;
+                z-index: 4;
+                margin-left: 12%;
+                margin-top: 25%;
+                max-width: 5%;
+                height: auto;
+            }
+                #brown:hover {
+                    content: url('pics/assets/bottle_brownglow.png');
+                    max-width: 5%;
+                    height: auto;
+                }
+            #green { /*blog*/
+                position: absolute;
+                z-index: 5;
+                margin-left: 66%;
+                margin-top: 23%;
+                max-width: 5%;
+                height: auto;
+            }
+                #green:hover {
+                    content: url('pics/assets/bottle_greenglow.png');
+                    max-width: 5%;
+                    height: auto;
+                }
+            #purple {
+                position: absolute;
+                z-index: 6;
+                margin-left: 76%;
+                margin-top: 11%;
+                max-width: 5%;
+                height: auto;
+            }
+                #purple:hover {
+                    content: url('pics/assets/bottle_purpleglow.png');
+                    max-width: 5%;
+                    height: auto;
+                }
+            /*Tooltips for Blue Bottle Menu*/
+            .tooltip {
+                position: relative;
+                display: inline-block;
+                border: 0.5rem solid #fff4c7; /*Cream*/
+                border-radius: 25%;
+            }
+            .tooltiptext {
+                visibility: hidden;
+                width: 2rem;
+                background-color: #281506; /*Dark Stone*/
+                color: #fff4c7; /*Cream*/
+                text-align: center;
+                padding: 1rem;
+                position: absolute;
+                z-index: 0;
+            }
+            .tooltip:hover .tooltiptext span {
+                visibility: visible;
             }
         }
     </style>
@@ -500,31 +590,41 @@
     </script>  
     </head>
     <body>
-        <div class="bg-box">
-            box
-        </div>
-
-
-
-
-        <div class="header-box">
-            <h1 class="glow1">haunted tower</h1>
-        </div>
-            
-            
-            
-                <div id="menu-panel" class="menu-panel">
-                    <a href="javascript:void(0)" class="closebtn" onClick="closeNav()"><h2>close</h2></a>
-
-                    <a href="index.html"><h2>index</h2></a>
-                    <a href="book-of-charms.html"><h2>book of charms</h2></a>
-                    <a href="blog.html"><h2>blog</h2></a>
-                    <a href="bookshelf.html"><h2>bookshelf</h2></a>
-                    <a href="hopecore.html"><h2>hopecore</h2></a>
-                    <a href="memeseum.html"><h2>memeseum</h2></a>
-                </div>
+        <div class="title-box">
+            <h1 class="glow1">reggie's<br/>haunted<br/>tower</h1>
+            <div id="menu-panel" class="menu-panel">
+                <a href="javascript:void(0)" class="closebtn" onClick="closeNav()"><h2>close</h2></a>
+                <a href="index.html"><h2>index</h2></a>
+                <a href="book-of-charms.html"><h2>book of charms</h2></a>
+                <a href="blog.html"><h2>blog</h2></a>
+                <a href="bookshelf.html"><h2>bookshelf</h2></a>
+                <a href="hopecore.html"><h2>hopecore</h2></a>
+                <a href="memeseum.html"><h2>memeseum</h2></a>
+            </div>
                 <img src="pics/assets/ancientbook.png" id="bookbtn" onClick="openNav()"/>
         </div>
+        <a href="about.html">
+            <img src="pics/assets/bottle_blue.png" id="blue"/>
+        </a>
+        <a href="memeseum.html">
+            <img src="pics/assets/bottle_red.png" id="red"/>
+        </a>
+        <a href="hopecore.html">
+            <img src="pics/assets/bottle_yellow.png" id="yellow"/>
+        </a>
+        <a href="bookshelf.html">
+            <img src="pics/assets/bottle_brown.png" id="brown"/>
+        </a>
+        <a href="blog.html">
+            <img src="pics/assets/bottle_green.png" id="green"/>
+        </a>
+        <div class=""
+        
+        
+        <a href="book-of-charms.html">
+            <img src="pics/assets/bottle_purple.png" id="purple"/>
+            <span class="tooltiptext">book of charms</span>
+        </a>
         <!---<div class="body-box">
             <div class="left-right">
                 <div class="left-box">
@@ -574,17 +674,5 @@
                 <p>Created the memeseum page. Added a link to the memeseum from the about page. Worked on format and content for haunted forest page.</p>
             </details>
         </div>--->
-        <!---<div class="about">
-            <a href="about.html" class="show">
-                <img class="aboutbtl" src="pics/bottles/about_bottle2.png" onmouseover="this.src='pics/bottles/about_bottle2_glowing.png'" onmouseout="this.src='pics/bottles/about_bottle2.png'"/>
-            </a>
-            <span class="about_tooltip">about</span>
-        </div>
-        <div class="bookshelf">
-            <a href="bookshelf.html" class="show">
-                <img class="bookshelfbtl" src="pics/bottles/bookshelf_bottle.png" onmouseover="this.src='pics/bottles/bookshelf_bottle_glowing.png'" onmouseout="this.src='pics/bottles/bookshelf_bottle.png'"/>
-            </a>
-            <span class="bookshelf_tooltip">bookshelf</span>
-        </div>---> 
     </body>
 </html>
