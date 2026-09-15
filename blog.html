@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <meta charset=""UTF-8"/>
+    <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,32 +16,72 @@
     /*Reference Color Palette*/
 
 
-    /*Static Blog Entries Styles*/
-    [id] {
+    body {
+        background-image: url('pics/bgs/pinkpastelrosesvertical.gif');
+        background-repeat: repeat;
+
+    }
+    p {
+        font-family: 'Roboto', sans-serif;
+    }
+    li {
+        list-style-type: none;
+        margin-bottom: 0.5rem;
+    }
+    button {
+        display: block;
+        background-color: white;
+        color: black;
+        border: 1px solid blue;
+    }
+    .breadcrumb {
+        display: flex;
+        justify-content: center;
+        border: 1px solid red;
+    }
+    .title-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        border: 1px solid blue;
+    }
+    .entry-list-box {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        padding: 1rem;
+    }
+    .tags {
+        display: block;
+    }
+    /*Static Blog Entry Styles*/
+     [id] {
 	    display: none;
     }
-    [id]:target {
-        display:block;
-    }
+        [id]:target {
+            display: block;
+        }
 </style>
 <script>
-    const tags = document.querySelectorAll('#tags > button');
-    const posts = document.querySelectorAll('#posts > div');
-    const displayAll = document.getElementById('all');
+    window.onload=function(){
+        const tags = document.querySelectorAll('#tags > button');
+        const posts = document.querySelectorAll('#posts > div');
+        const displayAll = document.getElementById('all');
 
-    console.log(posts.length);
+        console.log(posts.length);
 
-    displayAll.addEventListener('click', event => {
-        for (let i = 0; i < posts.length; i++) {
-            posts[i].style.display = "list-item";
-        }
-    });
+        displayAll.addEventListener('click', event => {
+            for (let i = 0; i < posts.length; i++) {
+                posts[i].style.display = "list-item";
+            }
+        });
 
-    for (let i = 0; i < tags.length; i++) {
-        /*when a tag button is clicked*/
-        tags[i].addEventListener('click', event => {
-        /*get the class of the clicked button*/
-        const tagClass = event.target.className;
+        for (let i = 0; i < tags.length; i++) {
+            /*when a tag button is clicked*/
+            tags[i].addEventListener('click', event => {
+            /*get the class of the clicked button*/
+            const tagClass = event.target.className;
 
             /*loop through all posts*/
             for (let j = 0; j < posts.length; j++) {
@@ -53,8 +93,8 @@
                 }
             }
         })
-    };
-
+        };
+    }
 </script>
 </head>
 <body>
@@ -66,16 +106,6 @@
         <h1>the perks of being wallpaper</h1>
         <h3>welcome to my blog, where i ramble about nothing</h3>
     </div>
-
-    <div class="entry-list-box">
-        <a href="#1">Entry 01</a><br>
-        <a href="#2">Entry 02</a><br>
-        <a href="#3">Entry 03</a><br>
-    </div>
-
-    <div id="1"><p>This is the first entry.</p></div>
-    <div id="2"><p>This is the second entry.</p></div>
-    <div id="3"><p>This is the third entry.</p></div>
 
     <div class="tags">
         <strong>tag</strong><br>
@@ -95,4 +125,15 @@
             <li><span><img src="#" href="link to book">1st favorite book</img><br>here's a brief description</span></li>
         </div>
     </div>
+
+    <div class="entry-list-box">
+        <a href="#1">Entry 01</a><br>
+        <a href="#2">Entry 02</a><br>
+        <a href="#3">Entry 03</a><br>
+    </div>
+
+    <div id="1"><p>This is the first entry.</p></div>
+    <div id="2"><p>This is the second entry.</p></div>
+    <div id="3"><p>This is the third entry.</p></div>
+<script src="main.js"></script>
 </body>
