@@ -16,17 +16,25 @@
     /*Reference Color Palette*/
 
 
+/*>>>   Root Styles***/
+    html {
+        scrollbar-width: thin;
+    }    
     body {
         background-image: url('pics/bgs/pinkpastelrosesvertical.gif');
         background-repeat: repeat;
-
+    }
+    h1, h2, h3, h4, h5 {
+        font-family: 'Tagesschrift', serif;
+        font-weight: 200;
+        text-transform: lowercase;
     }
     p {
         font-family: 'Roboto', sans-serif;
     }
     li {
         list-style-type: none;
-        margin-bottom: 0.5rem;
+        margin-bottom: 18px;
     }
     button {
         display: block;
@@ -62,68 +70,32 @@
         [id]:target {
             display: block;
         }
-</style>
-<script>
-    window.onload=function(){
-        const tags = document.querySelectorAll('#tags > button');
-        const posts = document.querySelectorAll('#posts > div');
-        const displayAll = document.getElementById('all');
-
-        console.log(posts.length);
-
-        displayAll.addEventListener('click', event => {
-            for (let i = 0; i < posts.length; i++) {
-                posts[i].style.display = "list-item";
-            }
-        });
-
-        for (let i = 0; i < tags.length; i++) {
-            /*when a tag button is clicked*/
-            tags[i].addEventListener('click', event => {
-            /*get the class of the clicked button*/
-            const tagClass = event.target.className;
-
-            /*loop through all posts*/
-            for (let j = 0; j < posts.length; j++) {
-                /*if the post has the same class as the clicked button, display it, otherwise hide it*/
-                if (posts[j].classList.contains(tagClass)) {
-                    posts[j].style.display = "list-item";
-                } else {
-                posts[j].style.display = "none";
-                }
-            }
-        })
-        };
+    .item { 
+        margin: 8px 0; 
+        padding: 6px; 
+        border: 1px solid #ddd;
     }
-</script>
+    .tag-buttons { 
+        margin-top: 6px; 
+    }
+    .tag-buttons button { 
+        margin-right: 6px; 
+        cursor: pointer; 
+    }
+    .tag-buttons button.active { 
+        background:#444;
+        color:#fff;
+        border-radius: 4px; 
+    }
+</style>
 </head>
 <body>
-    <div class="breadcrumb">
-        <a href="home.html">home</a> \ blog
-    </div>
-
     <div class="title-box">
         <h1>the perks of being wallpaper</h1>
         <h3>welcome to my blog, where i ramble about nothing</h3>
     </div>
-
-    <div class="tags">
-        <strong>tag</strong><br>
-        <span id="all"><button class="all">all tags</button></span>
-        <span id="tags">
-            <button class="gold-star">favorites</button>
-            <button class="101">101 books</button>
-            <button class="afm">appalachian folk magic</button>
-            <button class="sfm">scottish folk magic</button>
-            <button class="owned">books i own</button>
-        </span>
-    </div>
-    <br>
-    <div id="posts">
-        <div class="gold-star">
-            <h3>favorites</h3>
-            <li><span><img src="#" href="link to book">1st favorite book</img><br>here's a brief description</span></li>
-        </div>
+    <div class="breadcrumb">
+        <a href="index.html">home</a> \ blog
     </div>
 
     <div class="entry-list-box">
@@ -135,5 +107,83 @@
     <div id="1"><p>This is the first entry.</p></div>
     <div id="2"><p>This is the second entry.</p></div>
     <div id="3"><p>This is the third entry.</p></div>
-<script src="main.js"></script>
 </body>
+<script>
+
+</script>
+
+<nav>
+  <input id="filter" placeholder="javascr" />
+</nav>
+
+<section class="items">
+  <div class="item" data-tags="javascript,frontend,dom">
+    <h4>Item A</h4>
+    <p class="tags">javascript, frontend, dom</p>
+  </div>
+
+  <div class="item" data-tags="css,design,frontend">
+    <h4>Item B</h4>
+    <p class="tags">css, design, frontend</p>
+  </div>
+
+  <div class="item" data-tags="nodejs,backend,javascript">
+    <h4>Item C</h4>
+    <p class="tags">nodejs, backend, javascript</p>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('filter');
+  const items = Array.from(document.querySelectorAll('.item'));
+
+  // parse tags from data-tags into Set for each item
+  const itemData = items.map(el => {
+    const raw = el.dataset.tags || '';
+    const tags = raw.split(',').map(t => t.trim().toLowerCase()).filter(Boolean);
+    return { el, tags };
+  });
+
+  // helper: compute visibility based on a predicate
+  function applyFilter({ text = '', selectedTag = null } = {}) {
+    const q = (text || '').trim().toLowerCase();
+    itemData.forEach(({ el, tags }) => {
+      const matchesText = q === '' || tags.some(t => t.includes(q));
+      const matchesTag = !selectedTag || tags.includes(selectedTag);
+      el.style.display = (matchesText && matchesTag) ? '' : 'none';
+    });
+  }
+
+  // live text filter
+  input.addEventListener('input', () => {
+    applyFilter({ text: input.value, selectedTag: activeTag });
+  });
+
+  // clickable tag UI: create tag buttons under each item
+  let activeTag = null;
+  itemData.forEach(({ el, tags }) => {
+    const container = document.createElement('div');
+    container.className = 'tag-buttons';
+    tags.forEach(tag => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.textContent = tag;
+      btn.addEventListener('click', () => {
+        // toggle active tag
+        activeTag = (activeTag === tag) ? null : tag;
+        // update button visuals
+        document.querySelectorAll('.tag-buttons button').forEach(b => {
+          b.classList.toggle('active', b.textContent === activeTag);
+        });
+        applyFilter({ text: input.value, selectedTag: activeTag });
+      });
+      container.appendChild(btn);
+    });
+    el.appendChild(container);
+  });
+
+  // initial show all
+  applyFilter();
+});
+</script>
